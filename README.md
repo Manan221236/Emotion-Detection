@@ -15,14 +15,25 @@ A computer vision tool that analyzes engagement levels between a child and thera
 
 ### Python Dependencies
 
+Create a `requirements.txt` file with the following content (or use the provided one):
+```
+opencv-python>=4.5.0
+numpy>=1.21.0
+dlib>=19.22.0
+face-recognition>=1.3.0
+mediapipe>=0.8.9
+fer>=22.4.0
+tqdm>=4.62.0
+```
+
+Then install all dependencies at once:
 ```bash
-pip install opencv-python
-pip install numpy
-pip install dlib
-pip install face-recognition
-pip install mediapipe
-pip install fer
-pip install tqdm
+pip install -r requirements.txt
+```
+
+**Alternative manual installation:**
+```bash
+pip install opencv-python numpy dlib face-recognition mediapipe fer tqdm
 ```
 
 ### Additional Model Files
@@ -34,9 +45,14 @@ Download the following required model file:
 
 ## Installation
 
-1. **Clone or download the script**
+1. **Set up your project**
    ```bash
+   # Create a new directory for your project
+   mkdir therapy-analysis
+   cd therapy-analysis
+   
    # Save the provided Python script as therapy_analysis.py
+   # Save the requirements.txt file (provided above)
    ```
 
 2. **Install dependencies**
@@ -216,8 +232,8 @@ for video_file in video_files:
 ```
 therapy-analysis/
 ├── therapy_analysis.py
-├── shape_predictor_68_face_landmarks.dat
 ├── requirements.txt
+├── shape_predictor_68_face_landmarks.dat
 ├── input_videos/
 │   └── your_video.mp4
 └── output_videos/
